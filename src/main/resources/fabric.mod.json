@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "littleskin-auth",
+	"version": "${version}",
+	"name": "LittleSkinAuth",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/littleskin-auth/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.duany.littleskinauth.LittleSkinAuth"
+		],
+		"client": [
+			"dev.duany.littleskinauth.LittleSkinAuthClient"
+		]
+	},
+	"mixins": [
+		"littleskin-auth.mixins.json",
+		{
+			"config": "littleskin-auth.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
